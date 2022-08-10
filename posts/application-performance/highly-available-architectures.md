@@ -1,0 +1,57 @@
+---
+title: 'Highly Available Architectures'
+metaDesc: 'The way an application is architected depends on the desired availability SLOs. For example, redundancy can be introduced to the origin in multiple ways, such as deploying in different availability zones or in different AWS regions. AWS edge services can be used by companies to build highly available applications.'
+socialImage: static-assets/highly-available-architectures-cf-r53.png
+---
+## Overview
+The way an application is architected depends on the desired availability SLOs. For example, redundancy can be introduced to the origin in multiple ways, such as deploying in different availability zones or in different AWS regions. AWS edge services such as CloudFront and Global Accelerator can be used by companies to build highly available applications.
+
+# Architectural decisions
+When deploying a highly available application on AWS with AWS edge services, you need to ask the following questions to design the most suited architecture for your business requirements.
+* Do you want an active/active or active/passive setup? 
+* Do you need different origins? different AZs? different regions?
+* What is the routing logic across origins for active/active setup, and failover criteria for active/passive setup?
+* What is the right balance of the reliability and speed of traffic switching, and the solution cost. 
+
+# Common use cases
+
+## Managing transient origin errors
+If your origin is prone to transient errors that can impair a small number of user requests, then CloudFront's native capabilities to mitigate their impact. Such 5xx errors could occur when the origin is temporary overloaded, or temporary unreachable because of transient network issue. CloudFront offers you three options to deal with transient origin errors:
+* If a request to CloudFront resulted in a cache miss to the origin, and the origin responded with 5xx or did not respond within a configurable [origin response timeout](https://docs.amazonaws.cn/en_us/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout), [CloudFront can be used](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html) to serve a stale cached version of the object if available in cache instead of returning an error response.
+* When a connection can't be established to the origin, CloudFront can be [configured](https://docs.amazonaws.cn/en_us/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#controlling-attempts-and-timeouts) to retry to connect up to three times with a configurable connection timeout (up to 10 seconds).
+* When the origin responds with a 5xx, or does not respond within a configurable [origin response timeout](https://docs.amazonaws.cn/en_us/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout), CloudFront can be configured with [Origin Failover feature](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html) to retry with a secondary origin. Note the following
+    * Origin Failover only works for cache behaviors configured with GET/HEAD HTTP verbs
+    * The secondary origin can be configured with the same domain of the primary origin, which results in an HTTP retry to the same origin
+    * IF Lambda@Edge is configured on origin events, CloudFront executes the function on failover as well. You can infer in the Lambda@Edge function whether the request was for the primary or the secondary origin to differentiate it's logic. To do that, configured the same [Origin Custom Header](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/add-origin-custom-headers.html) in both origins, but with different values that Lambda@Edge can read.
+* When the origin responds with a 5xx, or does not respond within a configurable [origin response timeout](https://docs.amazonaws.cn/en_us/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout), CloudFront can be configured to fail to a static file hosted in a different location using [Custom Error Page](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GeneratingCustomErrorResponses.html). This feature can be extended to generate dynamic responses on such errors, as described in the thrid pattern in the following [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/three-advanced-design-patterns-for-high-available-applications-using-amazon-cloudfront/)
+
+## Failover during origin outages
+
+### Failover based on Route 53 policy
+You can use [Route 53 Failover routing policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-failover) with health checks on the origin domain name that’s configured as the origin in CloudFront. When the primary origin becomes unhealthy, Route 53 detects it, and then starts resolving the origin domain name with the IP address of the secondary origin. CloudFront honors the origin DNS TTL, which means that traffic will start flowing to the secondary origin within the DNS TTLs. The most optimal configuration (Fast Check activated, a failover threshold of 1, and 60 second DNS TTL) means that the failover will take 70 seconds at minimum to occur. When it does, all of the traffic is switched to the secondary origin, since it’s a stateful failover. Note that this design can be further extended with [Route 53 Application Recovery Control](https://aws.amazon.com/route53/application-recovery-controller/) for more sophisticated application failover across multiple AWS Regions, Availability Zones, and on-premises. This approach can be combined with CloudFront for GET/HEAD HTTP verbs for failover with higher availability. This pattern is described in this [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/three-advanced-design-patterns-for-high-available-applications-using-amazon-cloudfront/).
+
+![](/static-assets/highly-available-architectures-cf-r53.png)
+
+When the different origins can't share the same domain name, such as for S3 based origins, Route 53 can't be used in the proposed way above. In this case, you'd need a Lambda@Edge on origin request event to query Route 53 for which origin to select, then reroute the request to the selected origin, by changing the origin domain name together with the Host header. 
+
+### Failover with Global Accelerator
+If your application is using Global Accelerator, then you can benefit from its native [failover capability](https://docs.aws.amazon.com/global-accelerator/latest/dg/introduction-how-it-works.html#about-endpoint-groups-automatic-health-checks). Using Global Accelerator, your application can be deployed in a single AWS Region across multiple Availability Zones or across multiple AWS Regions. Based on health checks, Global Accelerator monitors the health of your application endpoints, and routes traffic away from unhealthy endpoints within tens of seconds. To get hands-on experience with Global Accelerator's failover capability, check this [workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/effb1517-b193-4c59-8da5-ce2abdb0b656/en-US/failover).
+
+## Active-Active setups
+
+### Web applications with latency-based routing
+When you replicate your origin in multiple AWS regions and want to serve users from the nearest region to reduce latency, your can leverage CloudFront with Route 53 [latency-based policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-latency.html). ou can use a latency based policy in Route 53 the origin domain name that’s configured as the origin in CloudFront. When CloudFront resolves the origin domain name to connect and send the request, Route 53 returns the nearest origin IP based on latency. Note that the location from which CloudFront resolves the origin domain name depends on the distribution configuration and the traffic type. In general, the domain name is resolved in the edge location for dynamic requests, and in the [Regional Edge Caches](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html#CloudFrontRegionaledgecaches) for static requests. This [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/latency-based-routing-leveraging-amazon-cloudfront-for-a-multi-region-active-active-architecture/) guides you through an active-active multi-region deployment for API Gateway.
+
+![](/static-assets/highly-available-architectures-cf-r53-apig.png)
+
+When the different origins can't share the same domain name, such as for S3 based origins, Route 53 can't be used in the proposed way above. In this case, you'd need a Lambda@Edge on origin request event to select the nearest origin based on the region in which the function was executed. This [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/using-amazon-cloudfront-and-amazon-s3-to-build-multi-region-active-active-geo-proximity-applications/) guides you through an active-active multi-region deployment for S3.
+
+### Web applications with advanced routing
+In certain scenarios, you might need to route requests using CloudFront based on application level logic. When the logic is simple such as routing to different origins based on path (e.g. /api1 to origin 1 and /api2 tp origin 2), you can simply use the native [cache behavior](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesCacheBehavior) capability of CloudFront. When the logic is more sophisticated, then Lambda@Edge on origin request event allows you to route traffic based on application level attributes, such as url, cookies, headers, country, etc.. The logic can be static and fully embed in the function code, or you can have your routing rules stored in a external storage such as S3 or DynamoDB, and let Lambda@Edge execute the appropriate rule. [OutSystems](https://aws.amazon.com/blogs/architecture/dynamic-request-routing-in-multi-tenant-systems-with-amazon-cloudfront/) and [TrueCar](https://aws.amazon.com/blogs/networking-and-content-delivery/truecars-dynamic-routing-with-aws-lambdaedge/) design an architecture based on rules stored in DynamoDB Global tables. Check this [talk](https://youtu.be/3iknsVpfYr0?t=1556) from re:Invent where they explain how to use Lambda@Edge to route users using cookies to the region where their data is homed.
+
+![](/static-assets/highly-available-architectures-cf-r53-app-routing.png)
+
+## Additional resources
+TODO https://aws.amazon.com/blogs/networking-and-content-delivery/improve-your-website-availability-with-amazon-cloudfront/
+TODO https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-global-accelerator-custom-routing-accelerators/
+TODO https://www.contentful.com/blog/2019/12/03/making-s3-more-resilient-lambda-edge/

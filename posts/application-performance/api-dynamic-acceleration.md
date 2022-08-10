@@ -1,0 +1,24 @@
+---
+title: 'API and Dynamic Acceleration'
+metaDesc: 'Certain workloads such as APIs or very personalized webpages are little or not cacheable. However, they can benefit from the security and acceleration provided by AWS edge services, such as CloudFront and Global Accelerator.'
+socialImage: static-assets/thumbnail-edge.png
+---
+## Overview
+Certain workloads such as APIs or very personalized webpages are little or not cacheable. However, they can benefit from the security and acceleration provided by AWS edge services, such as CloudFront and Global Accelerator. For example, [Slack](https://www.youtube.com/watch?v=oVaTiRl9-v0) reduced by 240% the response times of their APIs when started to use CloudFront, and [Tinder](https://youtu.be/DeygvViFlXQ?t=883) saw 40-60% improvements on their APIs. AWS edge services operate across hundreds of worldwide distributed Points of Presence (PoPs) within 20 to 30 milliseconds from users on average. Traffic to the origin is carried back over the AWS global network instead of going over the public internet. The AWS Global Infrastructure is a purpose-built, highly available, and low-latency private infrastructure built on a global, fully redundant, metro fiber network that is linked via terrestrial and trans-oceanic cables across the world. Developers use Global Accelerator for accelerating non-HTTP traffic, and CloudFront for most HTTP(S) based Web applications. Otherwise 
+
+## Dynamic acceleration with CloudFront
+To use CloudFront as a reverse proxy, you need to configure the `Caching Disabled` [Managed Caching Policy](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html#:~:text=Name%3A%20CachingDisabled) in your distribution. On top of terminating the TCP/TLS connection closer to users, CloudFront provides the following performance benefits for dynamic content:
+* Serving content over modern internet protocols such as QUIC or TLS1.3, even if the origin doesn’t support it. 
+* Persisting connections to the origin. Sometimes, the request must be forwarded to the origin, such as when the content is not present in local cache or when it is purely dynamic, such as APIs. Requests forwarded over persistent connections from PoPs do not need to establish a new TCP/TLS connection to the origin, which removes the latency of multiple round trips. In addition, the lower rate of connection establishment at the origin reduces its cost in terms of scaling. More specifically for EC2 and ALB based origins, it will result in lower  Data Transfer Out (DTO) charges, because the DTO overhead of sending TLS certificates from the origin will be reduced. Note that CloudFront doesn't meter TLS overhead in its DTO calculations. You can enhance the connection reuse on CloudFront by enabling Origin Shield.
+
+## Dynamic acceleration with Global Accelerator
+Global Accelerator routes user traffic to the nearest PoP using BGP Anycast. From there, Global Accelerator carries your user traffic to your Regional endpoints over the Amazon backbone. Global Accelerator further enhances performance thanks to the following techniques:
+* Jumbo frame support. By enabling jumbo frames between the AWS edge location and the application endpoint in the AWS Region, Global Accelerator is able to send and receive up to 6X more data (payload) in each packet. Jumbo frame support cuts down the total time required to transmit data between users and your application.
+* TCP termination at the edge. Global Accelerator reduces initial TCP setup time by establishing a TCP connection between the client and the AWS PoP closest to the client. Almost concurrently, a second TCP connection is made between the PoP and the application endpoint in the AWS Region.
+* Large receive side window, TCP buffers and congestion window. For TCP terminated traffic, Global Accelerator is able to receive and buffer larger amounts of data from your application in a shorter time period by tuning receive side window and TCP buffer settings on the AWS edge infrastructure. This provides faster downloads to your clients, who are now fetching data in a shorter time directly from the AWS edge. By transmitting data over the AWS global network, Global Accelerator can scale up the TCP congestion window to send larger amounts of data than usually possible via the public internet.
+
+AWS Global Accelerator can be considered for HTTP(S) workloads in the following common scenarios: When Static IPs, including BYOIP are required, and when hte origin hosts tens of thousands of domain names.
+
+## Additional resources
+TODO https://aws.amazon.com/blogs/networking-and-content-delivery/well-architecting-online-applications-with-cloudfront-and-aws-global-accelerator/
+TODO: Explain the use case of API Gateway and issue with host header https://twitter.com/matthieunapoli/status/1546071002064592897?s=21&t=MHeY6dUuDGsR5WvTadPagA
