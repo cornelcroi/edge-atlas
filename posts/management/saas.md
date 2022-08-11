@@ -1,7 +1,7 @@
 ---
 title: 'Multi-tenant SaaS deployments'
 metaDesc: 'SaaS providers operate multi-tenant solutions that require specific design considerations when building them using AWS edge services such as CloudFront and WAF.'
-socialImage: static-assets/aas-s3.png
+socialImage: static-assets/saas-s3.png
 ---
 ## Overview
 SaaS providers operate multi-tenant solutions that require specific design considerations when building them using AWS edge services such as CloudFront and WAF. The architecture is designed to meet the target tradeoff between flexibility, cost, scalability and operational overhead.
