@@ -8,7 +8,7 @@ function NavLink({to, children}) {
 
 function MobileNav({open, setOpen}) {
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
+        <div className={`absolute top-0 left-0 h-screen w-screen bg-purple-500 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
                 <a className="text-xl font-bold" href="/">Edge Atlas</a>
             </div>
