@@ -33,9 +33,8 @@ export default function GettingStarted({ posts }) {
           className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
         >
           <Link href={`/post/${slug}`}>
-
             <a>
-            <Image
+            <img
                 width={650}
                 height={340}
                 alt={frontmatter.title}

@@ -35,7 +35,7 @@ export default function Management({ posts }) {
           <Link href={`/post/${slug}`}>
 
             <a>
-            <Image
+            <img
                 width={650}
                 height={340}
                 alt={frontmatter.title}
