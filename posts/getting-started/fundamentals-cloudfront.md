@@ -1,11 +1,11 @@
 ---
 title: 'CloudFront Fundamentals'
-metaDesc: 'TBD Ipsum Lorum this cookie is nice!'
+metaDesc: 'Under construction'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
 
 ## Additional resources
-TODO caching
-TODO layers
-TODO logic native vs edge computing
+* TODO Explain layers
+* TODO Explain caching fundamentals
+* TODO Explain what can be done natively versus using CFF/Lambda@@Edge

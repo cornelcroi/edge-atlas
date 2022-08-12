@@ -35,9 +35,10 @@ export default function VideoStreaming({ posts }) {
           <Link href={`/post/${slug}`}>
 
             <a>
-            <img
-                width={650}
-                height={340}
+            <Image 
+                width={640} 
+                height={260}    
+                objectFit="cover"
                 alt={frontmatter.title}
                 src={`/${frontmatter.socialImage}`}
               />

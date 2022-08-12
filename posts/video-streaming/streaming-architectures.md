@@ -4,7 +4,7 @@ metaDesc: 'AWS services can be used to deliver massive video-on-demand catalogs 
 socialImage: static-assets/video-streaming-vod.png
 ---
 ## Overview
-AWS services can be used to deliver massive video-on-demand catalogs or live stream content to millions of viewers. The architecture of the solution will depend on the use case (e.g. VoD versus Live), and the business requirements (e.g. level of redundancy, ad insertion, etc..). In all cases, the architecture will have a video processing component, an originating server component and CloudFront for the content delivery.
+AWS services can be used to deliver massive video-on-demand catalogs or live stream content to millions of viewers. The architecture of the solution will depend on the use case (e.g. VoD versus Live), and the business requirements (e.g. level of redundancy, ad insertion, etc..). In all cases, the architecture will have a video processing component, an originating server component and CloudFront for the content delivery. For more in depth information, consider the [Amazon CloudFront for Media](https://docs.aws.amazon.com/whitepapers/latest/amazon-cloudfront-media/amazon-cloudfront-media.html) whitepaper.
 
 ## Common use cases
 

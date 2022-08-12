@@ -1,11 +1,10 @@
 ---
 title: 'AWS Edge fundamentals'
-metaDesc: 'TBD Ipsum Lorum this cookie is nice!'
+metaDesc: 'Under construction'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
 
 ## Additional resources
-TODO layers of services 
-TODO order of execution
-TODO integration with AWS origins and backbone benefit
+* TODO layers of services and order of execution
+* TODO integration with AWS origins and backbone benefit

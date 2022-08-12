@@ -1,10 +1,10 @@
 ---
 title: 'Edge computing fundamentals'
-metaDesc: 'TBD Ipsum Lorum this cookie is nice!'
+metaDesc: 'Under construction'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
 
 ## Additional resources
-TODO lambda@edge vs cloudfront functions
-TODO events types
+* TODO events types
+* TODO lambda@edge vs cloudfront functions

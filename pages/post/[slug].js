@@ -35,15 +35,21 @@ export async function getStaticProps({ params: { slug, originalFileName } }) {
     props: {
       frontmatter,
       content,
+      slug,
     },
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content, slug }) {
   return (
-    <div className='prose m-5'>
+    <div className='prose container m-5 mx-auto justify-center '>
       <h1>{frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+      <footer className='bg-purple-200 mt-8 py-4'>
+        <div className='container mx-auto flex justify-center text-white'><a href={`mailto:achrsouk@amazon.com?Subject=feedback on ${slug}`}>Provide us with feedback</a></div>
+      </footer>
     </div>
   );
 }
+
+

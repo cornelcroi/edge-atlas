@@ -1,6 +1,6 @@
 ---
 title: 'Performance Testing'
-metaDesc: 'TBD Ipsum Lorum this cookie is nice!'
+metaDesc: 'Under construction'
 socialImage: static-assets/thumbnail-edge.png
 ---
 # Performance testing
