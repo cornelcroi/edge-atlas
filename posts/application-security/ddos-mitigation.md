@@ -1,6 +1,6 @@
 ---
 title: 'DDoS Mitigation'
-metaDesc: 'Distributed Denial of Service (DDoS) attacks, if not mitigated, can impair the availability or degrade the response times of an application. If the application scales to absorb the attack, it could incur undesired scaling costs. Applications built on AWS benefit from native protections against DDoS attacks, and can be designed to be highly resilient against such attack using AWS services and offered security controls.'
+metaDesc: 'Applications built on AWS benefit from native protections against DDoS attacks, and can be designed to be highly resilient against such attack using AWS services and offered security controls.'
 socialImage: static-assets/ddos-mitigation-bp.png
 ---
 ## Overview
@@ -38,4 +38,4 @@ Shield Advanced is an additional AWS service you can subscribe to to enhance you
 * The possibility to be supported by the Shield Response Team during an incident response cause by a DDoS attacks. For example, they can help crafting WAF rules to block the attack.
 
 ## Additional resources
-TODO
+* TODO

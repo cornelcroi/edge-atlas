@@ -1,6 +1,6 @@
 ---
 title: 'Change Management'
-metaDesc: "Developers can introduce changes to their content delivery solutions, such as updating CloudFront Function code, moving Lambda@Edge to new version of Nodejs, adding new routes in CloudFront's cache behaviors, enabling a new available feature in CloudFront such as HTTP/3 over QUIC, updating WAF rules or invalidating files in CloudFront."
+metaDesc: "Developers can safely introduce changes to their content delivery solutions, such as updating CloudFront Function code, or adding new routes in CloudFront's cache behaviors, or updating WAF rules or invalidating files in CloudFront."
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -29,8 +29,8 @@ CloudFront allows you to invalidate content from it's cache, to force CloudFront
 It's recommended to consider invalidations as a last resort option rather than part of the normal operations. In fact, invalidations have cost, they do not affect cached content on browsers, and they do not benefit from the same availability of data plane operations (e.g. relying on Cache Control header) because invalidations are control plane operations. Cache-Control standard provides you with multiple directives to control the freshness of cache in CloudFront and in browsers: max-age, s-max-age, no-cache, private, etc..
 
 ## Additional resources
-TODO Blue/Green deployment
-TODO best practices: count mode, etc..
+* TODO Blue/Green deployment
+* TODO best practices: count mode, etc..
 
 
 

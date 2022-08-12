@@ -1,6 +1,6 @@
 ---
 title: 'Highly Available Architectures'
-metaDesc: 'The way an application is architected depends on the desired availability SLOs. For example, redundancy can be introduced to the origin in multiple ways, such as deploying in different availability zones or in different AWS regions. AWS edge services can be used by companies to build highly available applications.'
+metaDesc: 'The way an application is architected depends on the desired availability SLOs. AWS edge services can be used by companies to build highly available applications.'
 socialImage: static-assets/highly-available-architectures-cf-r53.png
 ---
 ## Overview
@@ -52,6 +52,6 @@ In certain scenarios, you might need to route requests using CloudFront based on
 ![](/static-assets/highly-available-architectures-cf-r53-app-routing.png)
 
 ## Additional resources
-TODO https://aws.amazon.com/blogs/networking-and-content-delivery/improve-your-website-availability-with-amazon-cloudfront/
-TODO https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-global-accelerator-custom-routing-accelerators/
-TODO https://www.contentful.com/blog/2019/12/03/making-s3-more-resilient-lambda-edge/
+* TODO https://aws.amazon.com/blogs/networking-and-content-delivery/improve-your-website-availability-with-amazon-cloudfront/
+* TODO https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-global-accelerator-custom-routing-accelerators/
+* TODO https://www.contentful.com/blog/2019/12/03/making-s3-more-resilient-lambda-edge/

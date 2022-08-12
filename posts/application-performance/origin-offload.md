@@ -48,5 +48,5 @@ Another technique for increasing CHR, but this time at the browser level, is to 
 
 
 ## Additional resources
-TODO talk about prefetching
-TODO talk about byte range requests, specifically avoiding overlapping boundaries
+* TODO talk about prefetching
+* TODO talk about byte range requests, specifically avoiding overlapping boundaries

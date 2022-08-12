@@ -34,10 +34,8 @@ export default function GettingStarted({ posts }) {
         >
           <Link href={`/post/${slug}`}>
             <a>
-            <Image 
-                width={640} 
-                height={260}    
-                objectFit="cover"
+            <img
+                style={{objectFit:'cover', margin:'auto', width:'385px', height:'164px'}}
                 alt={frontmatter.title}
                 src={`/${frontmatter.socialImage}`}
               />

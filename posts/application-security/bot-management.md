@@ -1,6 +1,6 @@
 ---
 title: 'Bot management'
-metaDesc: 'Automated traffic coming from bots can be undesirable because they can result in availability issues, increased infrastructure cost, fraud such as account takeover, and impact on business because of skewed analytics of scraped pricing by competitors. Bot management designates the controls that developers can use to identify traffic coming from bot, and then blocking undesired ones.'
+metaDesc: 'Automated traffic coming from bots can be undesirable because they can result in availability issues, increased infrastructure cost, fraud such as account takeover with impact on business.'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -51,4 +51,4 @@ Note that each security vendor has different strengths in terms of industry spec
 
 
 ## Additional resources
-TODO
+* TODO

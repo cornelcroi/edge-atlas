@@ -1,6 +1,6 @@
 ---
 title: 'Troubleshooting'
-metaDesc: "When the application has multiple components, such as an ALB based origin, and CloudFront configured with Lambda@Edge, errors can happen at multiple level. For example, the origin is temporary overloaded and it returns 5xx errors, CloudFront can't connect to the origin or Lambda@Edge execution failed because of unhandled exception in the function code. Operators or SREs need to troubleshoot such as errors, to understand their origin and employ corrective measures."
+metaDesc: "When the application has multiple components, such as an ALB based origin, and CloudFront configured with Lambda@Edge, errors can happen at multiple level."
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -44,10 +44,10 @@ It's recommended to deploy monitoring on the client side using tools such as [Cl
 In scenarios where you need the help of AWS support to troubleshoot errors or performance issues, it's recommended to include in your ticket to support, a list of request-ids that represent such requests. With these request-ids, the support are able to troubleshoot more in depth the behavior of the the requests on CloudFront.
 
 ## Additional resources
-TODO error caching
-TODO pragma requests
-TODO other headers like age, pop
-TODO error coming from CloudFront or the origin?
-TODO OLX https://aws.amazon.com/blogs/architecture/field-notes-how-olx-europe-fights-millions-of-bots-with-aws/
-TODO other info for support
-TODO NEL
+* TODO error caching
+* TODO pragma requests
+* TODO other headers like age, pop
+* TODO error coming from CloudFront or the origin?
+* TODO OLX https://aws.amazon.com/blogs/architecture/field-notes-how-olx-europe-fights-millions-of-bots-with-aws/
+* TODO other info for support
+* TODO NEL

@@ -28,5 +28,5 @@ To get started with a Live Streaming solution on AWS, deploy this [AWS Solution]
 ![](/static-assets/video-streaming-live.png)
 
 ## Additional resources
-TODO ad insertion
-TODO Managed cache policies
+* TODO ad insertion
+* TODO Managed cache policies

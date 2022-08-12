@@ -1,6 +1,6 @@
 ---
 title: 'Content Protection'
-metaDesc: 'Controlling access to video content is one of the top priorities for media companies. Without such capabilities, they risk online piracy with considerable impact to their business: Loss of revenues and legal liabilities towards content right holders.'
+metaDesc: 'Controlling access to video content is one of the top priorities for media companies to mitigate online piracy, that has considerable impact to their business: Loss of revenues and legal liabilities towards content right holders.'
 socialImage: static-assets/content-protection-smd.png
 ---
 ## Overview

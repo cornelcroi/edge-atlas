@@ -1,6 +1,6 @@
 ---
 title: 'Monitoring'
-metaDesc: 'TBD Ipsum Lorum this cookie is nice!'
+metaDesc: 'Under Construction'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -10,8 +10,8 @@ socialImage: static-assets/thumbnail-edge.png
 ## Alarming
 
 ## Additional resources
-TODO security hub
-TODO Shield advanced
-TODO global dashboard cross region
-TODO advanced metrics
-TODO cloudwatch ML capabilities and  https://aws.amazon.com/blogs/security/how-to-improve-visibility-into-aws-waf-with-anomaly-detection/
+* TODO security hub
+* TODO Shield advanced
+* TODO global dashboard cross region
+* TODO advanced metrics
+* TODO cloudwatch ML capabilities and  https://aws.amazon.com/blogs/security/how-to-improve-visibility-into-aws-waf-with-anomaly-detection/

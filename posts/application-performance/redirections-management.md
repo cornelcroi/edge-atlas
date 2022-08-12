@@ -1,6 +1,6 @@
 ---
 title: 'Redirection Management'
-metaDesc: 'Redirections is a common functionality on websites, that could be used to localize content based on country, redirecting past campaign URLs to a landing page, etc... Executing redirections at the edge, i.e. on CloudFront level, has the benefit of reducing load on the origin, and making redirections faster..'
+metaDesc: 'Redirections is a common functionality on websites, that could be used to localize content based on country, redirecting past campaign URLs to a landing page, etc...'
 socialImage: static-assets/redirections-lambdaedge.png
 ---
 ## Overview
@@ -53,6 +53,6 @@ When you have more sophisticated logic for redirections, for example when have m
 In [this blog](https://aws.amazon.com/blogs/networking-and-content-delivery/handling-redirectsedge-part2/) you can learn how to implement this using an S3 based storage for storing redirections rules, with a simple UI for authenticated administrators to manage them.
 
 ## Additional resources
-TODO
+* TODO
 
 

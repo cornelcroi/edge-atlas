@@ -1,6 +1,6 @@
 ---
 title: 'Analytics'
-metaDesc: 'Analytics is an important observability component of an edge solution to understand user traffic, and the behavior of the solution. For example, developers would like to view how is their traffic volumes are evolving, where users are coming from from, what are the main attack vectors that are targeting the application, how much CloudFront is offloading the origin, etc...'
+metaDesc: 'Analytics is an important observability component of an edge solution to understand user traffic, and the behavior of the solution.'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -46,6 +46,6 @@ You can build an advanced analytics solutions starting from the common solutions
 It's recommended to have a the full picture on your users experience by also enabling client analytics. This can be done using Real User Monitoring tools, such as CloudWatch RUM. CloudWatch RUM requires to you to add a simple SDK to your web application to start collecting client-side data and provide you with useful analytics. In CloudWatch RUM, [analytics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-view-data.html) include statistics about the application performance, errors, user devices and browsers, and finally user journey as they navigate through your application.
 
 ## Additional resources
-TODO add solution by stanislav
-TODO log enrichment
-TODO analytics from CFF?
+* TODO add solution by stanislav
+* TODO log enrichment
+* TODO analytics from CFF?

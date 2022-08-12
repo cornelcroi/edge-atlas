@@ -1,6 +1,6 @@
 ---
 title: 'Image Optimization'
-metaDesc: 'Images are commonly the heaviest components of a web page, both in terms of bytes and number of HTTP requests. Optimizing images on website is critical for developers to improve user experience, reduce the costs of content delivery, and enhance SEO.'
+metaDesc: 'Images are commonly the heaviest components of a web page. Optimizing images on website is critical to improve user experience, reduce the costs of content delivery, and enhance SEO.'
 socialImage: static-assets/image-optimization-recommended-architecture.png
 ---
 ## Overview
@@ -30,5 +30,5 @@ The proposed architecture is suitable for most common use cases. Images transfor
     2. For additional access control, CloudFront is configured to send a secret key in a [Custom origin header](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/add-origin-custom-headers.html), which is validated in the Lambda code before processing the image.
 
 ## Additional resources
-TODO Image handler
-TODO partners
+* TODO Image handler
+* TODO partners

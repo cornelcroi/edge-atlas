@@ -1,6 +1,6 @@
 ---
 title: 'API and Dynamic Acceleration'
-metaDesc: 'Certain workloads such as APIs or very personalized webpages are little or not cacheable. However, they can benefit from the security and acceleration provided by AWS edge services, such as CloudFront and Global Accelerator.'
+metaDesc: 'Certain workloads such as APIs or very personalized webpages are little or not cacheable, but they can benefit from the security and acceleration provided by AWS edge services.'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview

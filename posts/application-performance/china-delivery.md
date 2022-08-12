@@ -1,6 +1,6 @@
 ---
 title: 'Content delivery in China'
-metaDesc: 'Companies who operate business in China, consider deploying local infrastructure to overcome the performance and availability challenges of traversing the Great Firewall of China (GFW).'
+metaDesc: 'Companies who operate business in China, consider deploying local infrastructure to overcome the performance and availability challenges of traversing the Great Firewall of China.'
 socialImage: static-assets/china-delivery-global-origin.png
 ---
 ## Overview
@@ -30,4 +30,4 @@ For the best performance and availability; it's recommended to fully deploy the 
 
 
 ## Additional resources
-TODO
+* TODO

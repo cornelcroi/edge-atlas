@@ -47,12 +47,12 @@ Create a new CloudFront distribution for every new tenant. Automate the creation
 If the scale of your requirements cannot be satisfied by CloudFront, then consider using a fleet of reverse proxy (NLB/EC2 based) to terminate TCP/TLS connections, fronted by Global Accelerator. Note that in this case, you can not benefit from caching functionality.
 
 ## Additional resources
-TODO Saas factory https://aws.amazon.com/partners/programs/saas-factory/
-TODO coming blog by Tzoori
-TODO Automated TLS certificate creation and Free ACM
-TODO CORS
-TODO WAF explained more
-TODO https://aws.amazon.com/blogs/infrastructure-and-automation/deploy-spa-with-personalized-subdomains-using-aws-cdk/
-TODO CF distro is for free.
+* TODO Saas factory https://aws.amazon.com/partners/programs/saas-factory/
+* TODO coming blog by Tzoori
+* TODO Automated TLS certificate creation and Free ACM
+* TODO CORS
+* TODO WAF explained more
+* TODO https://aws.amazon.com/blogs/infrastructure-and-automation/deploy-spa-with-personalized-subdomains-using-aws-cdk/
+* TODO CF distro is for free.
 
 

@@ -1,6 +1,6 @@
 ---
 title: 'Addressing OWASP Top 10 risks'
-metaDesc: 'The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications. AWS provides companies with tools and guidance to build applications that address OWASP Top 10 risks.'
+metaDesc: 'The OWASP Top 10 is a standard awareness document for developers and web application security. AWS provides companies with tools and guidance to build applications that address OWASP Top 10 risks.'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -15,5 +15,5 @@ Many [AWS partners](https://partners.amazonaws.com/search/partners?facets=Produc
 You can also consider Managed rules that are also inspired by OWASP Top 10 from the [AWS Marketplace](https://aws.amazon.com/marketplace/solutions/security/waf-managed-rules). It includes HighSecurity OWASP Set by CSC, Web exploits OWASP rules by F5 and Complete OWASP top 10 rulegroup by Fortinet.
 
 ## Additional resources
-TODO Partner
-TODO testing methodology
+* TODO Partner
+* TODO testing methodology

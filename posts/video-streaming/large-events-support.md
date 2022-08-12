@@ -1,6 +1,6 @@
 ---
 title: 'Large Events Support'
-metaDesc: 'Large video streaming events, such as Live streaming a popular football match, or making available a very much awaited on-demand series, require additional due diligence and planning to ensure a successful event. '
+metaDesc: 'Large video streaming events, such as Live streaming a popular football match, require additional due diligence and planning to ensure a successful event. '
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview

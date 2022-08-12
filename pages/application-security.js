@@ -36,8 +36,7 @@ export default function ApplicationSecurity({ posts }) {
 
             <a>
             <img
-                width={650}
-                height={340}
+                style={{objectFit:'cover', margin:'auto', width:'385px', height:'164px'}}
                 alt={frontmatter.title}
                 src={`/${frontmatter.socialImage}`}
               />

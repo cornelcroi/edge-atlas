@@ -1,6 +1,6 @@
 ---
 title: 'Managing false positives in AWS WAF'
-metaDesc: "When security controls are added to an architecture, they can cause false positives, which represent legitimate user requests that were blocked. It's not a desirable effect for developers, who try to reduce false positives frequency using different techniques. AWS WAF allows developers to tune their rules to reduce false positives, but in the same time false negatives."
+metaDesc: "When security controls are added to an architecture, they can cause false positives, which represent legitimate user requests that were blocked. AWS WAF allows developers to reduce false positives."
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -35,4 +35,4 @@ When a rule matches a request, you can configure it to block it. However, you ca
 * AMRs emit labels when they are evaluated. You can set their action to Count, and then use the emitted label in combination with other rules to block users on a higher confidence level. For example, you can use Amazon Ip reputation list AMR in count mode, and then create a subsequent rule based on labels emitted by this AMR to rate limit requests. Or you can create blocking rules on the combination of multiple signals: If the IP is malicious, and flagged by ATP then block. 
 
 ## Additional resources
-TODO false positives reporting
+* TODO false positives reporting

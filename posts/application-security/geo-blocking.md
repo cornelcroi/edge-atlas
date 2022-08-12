@@ -1,6 +1,6 @@
 ---
 title: 'Geo-blocking'
-metaDesc: 'Companies implement geo-blocking policies on their web applications for different purposes, whether regulatory to block embargoed countries or to enforce content delivery exclusively in the countries where have licence to'
+metaDesc: 'Companies implement geo-blocking policies on web applications for different purposes (e.g. regulatory with embargoed countries).'
 socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
@@ -39,6 +39,6 @@ function handler(event) {
 ```
 
 ## Additional resources
-TODO CloudFront and WAF determine the location of viewers by using a third-party geo-location database. The accuracy of the mapping between IP addresses and countries varies by region. 
-TODO waf granularity
-TODO This can be used independently or combined with the previous approaches. When combined, requests that make it through the geographic blocking / WAF can be further evaluated by a CloudFront Function. Refer to CloudFront pricing for details on cost.
+* TODO CloudFront and WAF determine the location of viewers by using a third-party geo-location database. The accuracy of the mapping between IP addresses and countries varies by region. 
+* TODO waf granularity
+* TODO This can be used independently or combined with the previous approaches. When combined, requests that make it through the geographic blocking / WAF can be further evaluated by a CloudFront Function. Refer to CloudFront pricing for details on cost.

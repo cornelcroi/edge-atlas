@@ -33,10 +33,10 @@ On the application side, you can implement many optimizations to reduce the cost
 *  Reduce delivered bytes. For example you can compress your objects in different formats and serve the most optimal format for a user device. For example, serve Avif or WebP images to devices that support it because they are more compressed that jpeg. You can compress your text files using GZIP/Brotli by either configuring CloudFront to do it automatically, or do it on the origin side.
 
 ## Additional resources
-TODO shield advanced vs waf/fms
-TODO setting up budget/ cost explorer
-TODO age header/ 3XX
-TODO blog media for serving best video
+* TODO shield advanced vs waf/fms
+* TODO setting up budget/ cost explorer
+* TODO age header/ 3XX
+* TODO blog media for serving best video
 
 
 

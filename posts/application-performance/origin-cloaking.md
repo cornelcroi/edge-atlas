@@ -1,6 +1,6 @@
 ---
 title: 'Origin Cloaking'
-metaDesc: 'Origin Cloaking is a technique to reduce the attack surface of web applications. As a single a entry point to their application, developers use CloudFront, where they configure security controls such as protections against DDoS attacks and undesired bots. Origin cloaking stops malicious actors from by-passing CloudFront to attack the origin directly.'
+metaDesc: 'Origin Cloaking stops malicious actors from by-passing CloudFront with its security controls to attack the origin directly.'
 socialImage: static-assets/origin-cloaking-app-level-alb.png
 ---
 ## Overview
@@ -30,8 +30,8 @@ With the network level protections, your application can still be prone to a mal
 If the application is using Global Accelerator for its entry point, and the origin is ALB or EC2, then you can keep the origin resources in a private subnet. Global Accelerator doesn't require exposing your applications directly to the internet.
 
 ## Additional resources
-TODO maybe change naming to Site shield
-TODO https://catalog.us-east-1.prod.workshops.aws/workshops/effb1517-b193-4c59-8da5-ce2abdb0b656/en-US/origin-cloaking
-TODO image for direct connect
-TODO notifications when IPs change
-TODO https://aws.amazon.com/blogs/networking-and-content-delivery/serving-private-content-using-amazon-cloudfront-aws-lambdaedge/
+* TODO maybe change naming to Site shield
+* TODO https://catalog.us-east-1.prod.workshops.aws/workshops/effb1517-b193-4c59-8da5-ce2abdb0b656/en-US/origin-cloaking
+* TODO image for direct connect
+* TODO notifications when IPs change
+* TODO https://aws.amazon.com/blogs/networking-and-content-delivery/serving-private-content-using-amazon-cloudfront-aws-lambdaedge/
