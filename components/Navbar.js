@@ -10,7 +10,7 @@ function MobileNav({open, setOpen}) {
     return (
         <div className={`absolute top-0 left-0 h-screen w-screen bg-purple-500 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
-                <a className="text-xl font-bold" href="/">AWS Edge Atlas</a>
+                <a className="text-xl font-bold" href="/">AWS Edge</a>
             </div>
             <div className="flex flex-col ml-4 font-semibold">
                 <a className="text-xl font-medium my-4" href="/getting-started" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Getting Started</a>
@@ -31,7 +31,7 @@ export default function Navbar() {
         <nav className=" bg-purple-500 flex filter drop-shadow-md px-4 py-4 h-20 items-center text-white">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
-                <a className="text-2xl font-bold" href="/">AWS Edge Atlas</a>
+                <a className="text-2xl font-bold" href="/">AWS Edge</a>
             </div>
             <div className="w-9/12 flex justify-end items-center">
 
