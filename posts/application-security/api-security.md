@@ -5,12 +5,28 @@ socialImage: static-assets/thumbnail-edge.png
 ---
 ## Overview
 
-## Additional resources
+## Encryption
+TODO TLS options, QUIC, CFF
+
+## Access Control
+CloudFront vs API Gateway
+CORS (vs same origin)
+
+
+## Blocking malicious requests
+
+### Rate liming
+WAf vs API Gateway
+
+### Bots
+
 * TODO Limitations for Captcha/ATP
-* TODO JSON inspection 
+
+### Application Vulnerabilities
+SQLi/Xss Json Inspection
+
+## Additional resources
 * TODO https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html
 * TODO https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html
-* TODO Authorization on CloudFront
 * TODO Only allow expected paths
-* TODO CORS/ Same origin
-* TODO Work backwards from https://owasp.org/www-project-api-security/
+* TODO  https://owasp.org/www-project-api-security/

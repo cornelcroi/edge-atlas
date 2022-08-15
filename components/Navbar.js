@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+
 function NavLink({to, children}) {
     return <a href={to} className={`mx-4`}>
         {children}
@@ -13,18 +14,15 @@ function MobileNav({open, setOpen}) {
                 <a className="text-xl font-bold" href="/">AWS Edge</a>
             </div>
             <div className="flex flex-col ml-4 font-semibold">
-                <a className="text-xl font-medium my-4" href="/getting-started" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Getting Started</a>
-                <a className="text-xl font-medium my-4" href="/application-performance" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Application Performance</a>
-                <a className="text-xl font-medium my-4" href="/application-security" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Application Security</a>
-                <a className="text-xl font-medium my-4" href="/observability" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Observability</a>
-                <a className="text-xl font-medium my-4" href="/management" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Management</a>
-                <a className="text-xl font-medium my-4" href="/video-streaming" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>Video Streaming</a>
+                {process.env.navbar.map((item) => (
+                    <a className="text-xl font-medium my-4" href={item.link} onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>{item.name}</a>
+                ))}
             </div>  
         </div>
     )
 }
 
-export default function Navbar() {
+export default function Navbar({sections}) {
 
     const [open, setOpen] = useState(false)
     return (
@@ -45,12 +43,9 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden md:flex font-semibold">
-                    <NavLink to="/getting-started">Getting Started</NavLink>
-                    <NavLink to="/application-performance">Application Performance</NavLink>
-                    <NavLink to="/application-security">Application Security</NavLink>
-                    <NavLink to="/observability">Observability</NavLink>
-                    <NavLink to="/management">Management</NavLink>
-                    <NavLink to="/video-streaming">Video Streaming</NavLink>
+                    {process.env.navbar.map((item) => (
+                        <NavLink to={item.link}>{item.name}</NavLink>
+                    ))}
                 </div>
             </div>
         </nav>

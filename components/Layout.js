@@ -1,5 +1,3 @@
-import Link from 'next/link';
-// https://github.com/rebelchris/next-markdown-blog
 export default function Layout({ children }) {
   return (
     <div className='flex flex-col min-h-screen'>
