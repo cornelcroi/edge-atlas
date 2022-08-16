@@ -1,5 +1,5 @@
 ---
-title: 'CloudFront with Wordpress tutorial'
+title: 'Set up Wordpress with CloudFront'
 metaDesc: 'Under construction'
 socialImage: static-assets/thumbnail-edge.png
 ---
