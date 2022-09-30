@@ -1,5 +1,5 @@
 ---
-title: 'Bot management'
+title: 'Bot Management'
 metaDesc: 'Automated traffic coming from bots can be undesirable because they can result in availability issues, increased infrastructure cost, fraud such as account takeover with impact on business.'
 socialImage: static-assets/thumbnail-edge.png
 ---
