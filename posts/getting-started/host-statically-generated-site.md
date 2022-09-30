@@ -1,6 +1,6 @@
 ---
 title: 'Host a statically generated site (SSG)'
-metaDesc: 'In this tutorial, you will learn how to deploy a statically generated website using S3 and CloudFront'
+metaDesc: '(120 mins) In this tutorial, you will learn how to deploy a statically generated website using S3 and CloudFront'
 socialImage: static-assets/host-ssg-website.png
 ---
 ## Overview
