@@ -35,8 +35,4 @@ With a more sophisticated webpage, such as e-commerce, with many teams executing
 
 ![](/static-assets/canary-deployments-dynamo.png)
 
-## Additional resources
-* TODO
-
-
 

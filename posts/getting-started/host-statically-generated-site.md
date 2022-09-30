@@ -14,10 +14,3 @@ The tutorial consists of 5 labs:
 * Making the website compatible with mobile devices by implementing image optimizations with Lambda@Edge and CloudFront Functions.
 * Protecting CloudFront distribution by AWS Bot Control to block malicious requests coming from bad bots pretending to be Search Engines or Social Media crawlers. Next, we will learn how to use CloudFront response headers policies to implement web security best practices such as Content Security Policy (CSP).
 * Implementing A/B testing of the changes done to the website with CloudFront Functions.
-
-
-
-
-
-
-

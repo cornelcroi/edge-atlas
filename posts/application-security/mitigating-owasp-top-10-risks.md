@@ -13,7 +13,3 @@ Many [AWS partners](https://partners.amazonaws.com/search/partners?facets=Produc
 
 ## Managed rules by security sellers
 You can also consider Managed rules that are also inspired by OWASP Top 10 from the [AWS Marketplace](https://aws.amazon.com/marketplace/solutions/security/waf-managed-rules). It includes HighSecurity OWASP Set by CSC, Web exploits OWASP rules by F5 and Complete OWASP top 10 rulegroup by Fortinet.
-
-## Additional resources
-* TODO Partner
-* TODO testing methodology

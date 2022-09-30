@@ -15,7 +15,7 @@ You might have rights to stream content in specific countries. To block users fr
 When you have a web browser user base, and want a simple tokenization mechanism to block unauthorized users from streaming your content, consider using CloudFront's native [signed cookie](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-cookies.html). This feature in CloudFront doesn't have any additional charge. When the user is authenticated tp stream video on your web application, your backend will set a cookie on the user browser that contains the signed token. Subsequent requests from the player will contain the signed cookie, and will be authorized by CloudFront. Follow the steps in this blog series ([1](https://aws.amazon.com/blogs/media/part-1-protecting-your-video-stream-with-amazon-cloudfront-and-serverless-technologies/) & [2](https://aws.amazon.com/blogs/media/part-2-protecting-your-video-stream-with-amazon-cloudfront-and-serverless-technologies/)) for a sample tokenization or video streaming using CloudFront.
 
 ### Advanced tokenization solution
-For advanced use cases, with a heterogeneous user device base (Set Top Boxes, Smart TVs), and more sophisticated requirements for tokenization logic, deploy the [Secure Media Delivery](TODO) solution. It's tokenization solution based on CloudFront Functions, with the following benefits:
+For advanced use cases, with a heterogeneous user device base (Set Top Boxes, Smart TVs), and more sophisticated requirements for tokenization logic, deploy the [Secure Media Delivery](https://aws.amazon.com/solutions/implementations/secure-media-delivery-at-the-edge/) solution. It's tokenization solution based on CloudFront Functions, with the following benefits:
 * The token is part of the path, which doesn't require modification on the client or server side in your video workflow.
 * The signature is customizable, to include different dimensions such as IP, Country, User Agent header, etc..
 * A session revocation mechanism completes the solution to identify and block pirated sessions within minutes.
@@ -23,8 +23,3 @@ For advanced use cases, with a heterogeneous user device base (Set Top Boxes, Sm
 Note that the solution provides you with an SDK to generate tokens.
 
 ![](/static-assets/content-protection-smd.png)
-
-## Additional resources
-* TODO link to secure media delivery solution when published
-* TODO update blog
-* TODO link to geo-blocking page

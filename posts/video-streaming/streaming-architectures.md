@@ -26,7 +26,3 @@ To get started with a Live Streaming solution on AWS, deploy this [AWS Solution]
 * CloudFront for content delivery.
 
 ![](/static-assets/video-streaming-live.png)
-
-## Additional resources
-* TODO ad insertion
-* TODO Managed cache policies

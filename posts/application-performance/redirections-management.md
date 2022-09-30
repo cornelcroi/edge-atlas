@@ -52,7 +52,4 @@ When you have more sophisticated logic for redirections, for example when have m
 
 In [this blog](https://aws.amazon.com/blogs/networking-and-content-delivery/handling-redirectsedge-part2/) you can learn how to implement this using an S3 based storage for storing redirections rules, with a simple UI for authenticated administrators to manage them.
 
-## Additional resources
-* TODO
-
 

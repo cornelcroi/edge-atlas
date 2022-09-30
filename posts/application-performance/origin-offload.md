@@ -45,8 +45,3 @@ To reduce this number of requests, developers can enable Origin Shield on CloudF
 On the application side, there are things that you can consider to positively influence the cache hit ratio. The first one is similar to reducing the cardinality of the cache key, but on the application level. When your application produces multiple renditions of the same asset, for example different sizes of an image to fit different screen, consider lowering down the number the possible values for width and height.
 
 Another technique for increasing CHR, but this time at the browser level, is to leverage the browser caching. This can be done using the `Cache-Control` header. You can differentiate TTLs between CloudFront and the browser either using `max-age` with `s-maxage` of the `Cache-Control` header, or simply use the `Cache-Control` header for the browser and control CloudFront TTLs using Cache Policies.
-
-
-## Additional resources
-* TODO talk about prefetching
-* TODO talk about byte range requests, specifically avoiding overlapping boundaries

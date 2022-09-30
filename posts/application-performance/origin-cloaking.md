@@ -28,10 +28,3 @@ With the network level protections, your application can still be prone to a mal
 
 ## Origin Cloaking with Global Accelerator
 If the application is using Global Accelerator for its entry point, and the origin is ALB or EC2, then you can keep the origin resources in a private subnet. Global Accelerator doesn't require exposing your applications directly to the internet.
-
-## Additional resources
-* TODO maybe change naming to Site shield
-* TODO https://catalog.us-east-1.prod.workshops.aws/workshops/effb1517-b193-4c59-8da5-ce2abdb0b656/en-US/origin-cloaking
-* TODO image for direct connect
-* TODO notifications when IPs change
-* TODO https://aws.amazon.com/blogs/networking-and-content-delivery/serving-private-content-using-amazon-cloudfront-aws-lambdaedge/

@@ -28,7 +28,7 @@ HTTP floods can be blocked in AWS WAF using different techniques:
 * Based on IP reputation using [Managed IP Reputation rule groups](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-ip-rep.html) (Amazon IP reputation list, Anonymous IP list, etc..)
 * Based on rate limiting. Read [this blog](https://aws.amazon.com/blogs/security/three-most-important-aws-waf-rate-based-rules/) to learn about advanced ways to implement rate limiting using AWS WAF.
 * Based on rules automatically created by Shield Advanced's [automatic application layer DDos mitigation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-automatic-app-layer-response.html).
-* Based on bot control capabilities. TODO link to other page
+* Based on [bot control capabilities](TODO).
 
 ## Enhance resiliency with Shield Advanced
 Shield Advanced is an additional AWS service you can subscribe to to enhance your security posture against DDoS attacks. Notably, Shield Advanced provides the following benefits:
@@ -36,6 +36,3 @@ Shield Advanced is an additional AWS service you can subscribe to to enhance you
 * Visibility on DDoS events using CloudWatch metrics.
 * Financial protection against DDoS attacks that scale your infrastructure and incurs unexpected costs.
 * The possibility to be supported by the Shield Response Team during an incident response cause by a DDoS attacks. For example, they can help crafting WAF rules to block the attack.
-
-## Additional resources
-* TODO

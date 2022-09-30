@@ -43,12 +43,3 @@ It's recommended to deploy monitoring on the client side using tools such as [Cl
 
 ## Asking help from AWS Support
 In scenarios where you need the help of AWS support to troubleshoot errors or performance issues, it's recommended to include in your ticket to support, a list of request-ids that represent such requests. With these request-ids, the support are able to troubleshoot more in depth the behavior of the the requests on CloudFront.
-
-## Additional resources
-* TODO error caching
-* TODO pragma requests
-* TODO other headers like age, pop
-* TODO error coming from CloudFront or the origin?
-* TODO OLX https://aws.amazon.com/blogs/architecture/field-notes-how-olx-europe-fights-millions-of-bots-with-aws/
-* TODO other info for support
-* TODO NEL

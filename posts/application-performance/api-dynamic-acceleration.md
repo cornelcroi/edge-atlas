@@ -20,8 +20,3 @@ Global Accelerator routes user traffic to the nearest PoP using BGP Anycast. Fro
 * Large receive side window, TCP buffers and congestion window. For TCP terminated traffic, Global Accelerator is able to receive and buffer larger amounts of data from your application in a shorter time period by tuning receive side window and TCP buffer settings on the AWS edge infrastructure. This provides faster downloads to your clients, who are now fetching data in a shorter time directly from the AWS edge. By transmitting data over the AWS global network, Global Accelerator can scale up the TCP congestion window to send larger amounts of data than usually possible via the public internet.
 
 AWS Global Accelerator can be considered for HTTP(S) workloads in the following common scenarios: When Static IPs, including BYOIP are required, and when hte origin hosts tens of thousands of domain names.
-
-## Additional resources
-* TODO https://aws.amazon.com/blogs/networking-and-content-delivery/well-architecting-online-applications-with-cloudfront-and-aws-global-accelerator/
-* TODO: Explain the use case of API Gateway and issue with host header https://twitter.com/matthieunapoli/status/1546071002064592897?s=21&t=MHeY6dUuDGsR5WvTadPagA https://answers.amazon.com/posts/257602
-* TODO true IP.

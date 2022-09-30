@@ -27,7 +27,3 @@ However, cache misses that needs to go back to the global origin from CloudFront
 For the best performance and availability; it's recommended to fully deploy the application locally using a dedicated domain name. The application would benefit from an origin in one of AWS China Regions, local delivery with CloudFront China and [Route 53 China](https://aws.amazon.com/about-aws/whats-new/2020/05/amazon-route-53-is-now-available-in-AWS-china-region/). To route traffic in an optimal way across both global and China deployments of your application, check the reference architecture described in this [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/optimizing-performance-for-users-in-china-with-amazon-route-53-and-amazon-cloudfront/).
 
 ![](/static-assets/china-delivery-local.png)
-
-
-## Additional resources
-* TODO

@@ -28,7 +28,3 @@ The proposed architecture is suitable for most common use cases. Images transfor
 4. Otherwise, S3 will respond with a 403 error code, which is detected by CloudFront’s [Origin Failover](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html). Thanks to this native feature, CloudFront retries the same URL but this time using the secondary origin based on Lambda URL. When invoked, the Lambda function downloads the original image from S3, transforms it using [Sharp library](https://sharp.pixelplumbing.com/), stores the transformed image in S3, then serve it through CloudFront where it will be cached for future requests. Note the following:
     1. The transformed image is added to S3 with a lifecycle policy that deletes it after a certain duration to reduce the storage cost. Ideally, you’d set this value according to the duration after which your images stop being popular.
     2. For additional access control, CloudFront is configured to send a secret key in a [Custom origin header](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/add-origin-custom-headers.html), which is validated in the Lambda code before processing the image.
-
-## Additional resources
-* TODO Image handler
-* TODO partners

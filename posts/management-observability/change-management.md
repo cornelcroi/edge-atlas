@@ -32,11 +32,6 @@ CloudFront allows you to invalidate content from it's cache, to force CloudFront
 
 It's recommended to consider invalidations as a last resort option rather than part of the normal operations. In fact, invalidations have cost, they do not affect cached content on browsers, and they do not benefit from the same availability of data plane operations (e.g. relying on Cache Control header) because invalidations are control plane operations. Cache-Control standard provides you with multiple directives to control the freshness of cache in CloudFront and in browsers: max-age, s-max-age, no-cache, private, etc..
 
-## Additional resources
-* TODO Blue/Green deployment
-* TODO best practices: count mode, etc..
-
-
 
 
 

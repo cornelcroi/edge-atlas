@@ -50,11 +50,3 @@ It's recommended to set up Real User Monitoring to measure the quality of experi
 
 ### Synthetics monitoring
 Synthetics is a complementary client-side technique to monitor your application, that works best during the development phase of your application. When you make changes to your application, it's recommended to add a testing step in your CI/CD pipeline to verify that there were no regression made to the application's performance, before deploying it in production. Consider using [CloudWatch Synthetics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html) for this purpose.
-
-
-## Additional resources
-* TODO template for CloudWatch template
-* TODO cross region cloudwatch dashboard
-* TODO example of CloudFront metric filter
-* TODO https://aws.amazon.com/blogs/security/how-to-improve-visibility-into-aws-waf-with-anomaly-detection/
-* Monitoring cross organization

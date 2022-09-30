@@ -84,10 +84,3 @@ exports.handler = (event, context, callback) => {
     return request;
 };
 ````
-
-## Additional resources
-* TODO best practice blog for CFF
-* TODO chaining functions
-* TODO add link to in depth explanation about different events.
-* TODO update blog about log aggregation for Lambda@Edge
-* TODO section for use cases

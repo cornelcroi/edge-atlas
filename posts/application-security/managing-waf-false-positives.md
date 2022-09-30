@@ -33,6 +33,3 @@ When a rule matches a request, you can configure it to block it. However, you ca
 * Responding with a Captcha challenge
 * Allowing the request, but sent a signal to the application upstream in a header. For example, you can use detections by Account Takeover Prevention to trigger a Multi-Factor Authentication in your application for suspicious login attempts.
 * AMRs emit labels when they are evaluated. You can set their action to Count, and then use the emitted label in combination with other rules to block users on a higher confidence level. For example, you can use Amazon Ip reputation list AMR in count mode, and then create a subsequent rule based on labels emitted by this AMR to rate limit requests. Or you can create blocking rules on the combination of multiple signals: If the IP is malicious, and flagged by ATP then block. 
-
-## Additional resources
-* TODO false positives reporting

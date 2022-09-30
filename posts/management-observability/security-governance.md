@@ -41,11 +41,6 @@ If you want to cover a wide range threats like in the previous scenario, but you
 
 This pattern can be taken to the extreme, where the central security team can create a dedicated and custom policy for each application team. In this model, the central security team is completely responsible for managing the WAf rules for each application teams. 
 
-## Additional resources
-* TODO Issue brought by WAF limits
-* TODO regional vs global deployment
-* TOO conditions for FMS config (price optimization), org, etc..
-
 
 
 

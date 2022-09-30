@@ -48,7 +48,3 @@ You can also add a protection layer provided by security vendors on the AWS MArk
 Note that each security vendor has different strengths in terms of industry specific protections, capabilities and cost. In general, your application using CloudFront can integrate with them in two different ways:
 * They can provide a proxy layer in SaaS mode that sits between CloudFront and your origin. 
 * They can provide a globally replicated Bot Mitigation API that can be called by Lambda@Edge for every incoming request (i.e. configured on viewer request event) to decide how to handle the request. Watch this [talk](https://youtu.be/3iknsVpfYr0?t=2108) by DataDome that explains this integration type.
-
-
-## Additional resources
-* TODO

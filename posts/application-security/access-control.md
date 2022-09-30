@@ -45,11 +45,3 @@ When you need a customized access control that is implemented on CloudFront, suc
 Securing CloudFront Distributions using OpenID Connect and AWS Secrets Manager
 
 ![](/static-assets/access-control-idp.png) 
-
-
-## Additional resources (under construction)
-* TODO key rotation
-* TODO add a demo on key policy generator
-* TODO talk about key storage
-
-

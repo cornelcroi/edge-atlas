@@ -23,8 +23,3 @@ Some companies consider CDN benchmarking and switching tools such as NS1 and Cit
     * The traffic level is enough to warm CDNs and see their real performance
     * The tested objects characteristics is similar to your application (e.g. Static vs Dynamic, small object vs large object, etc...)
     * The considered benchmarking metrics cover availability, throughput and latency in proportions that makes sens to your application.
-
-## Additional resources
-* TODO https://aws.amazon.com/blogs/networking-and-content-delivery/measuring-aws-global-accelerator-performance-and-analyzing-results/
-* TODO differentiate CDNs with CloudWatch rum.
-

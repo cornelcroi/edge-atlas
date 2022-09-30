@@ -37,8 +37,3 @@ function handler(event) {
     return request;
 }
 ```
-
-## Additional resources
-* TODO CloudFront and WAF determine the location of viewers by using a third-party geo-location database. The accuracy of the mapping between IP addresses and countries varies by region. 
-* TODO waf granularity
-* TODO This can be used independently or combined with the previous approaches. When combined, requests that make it through the geographic blocking / WAF can be further evaluated by a CloudFront Function. Refer to CloudFront pricing for details on cost.

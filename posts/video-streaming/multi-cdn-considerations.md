@@ -20,7 +20,3 @@ A common multi-CDN architecture consists in completely isolating CDNs by having 
 ![](/static-assets/multi-cdn-considerations-os.png)
 
 Another approach to address the aforementioned challenges could be using CloudFront as origin to your other CDNs, as described in this [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/using-cloudfront-origin-shield-to-protect-your-origin-in-a-multi-cdn-deployment/). Typically, you'd enable Origin Shield on your CloudFront distribution. However, this approach requires additional scrutiny over the redundancy of the setup. with this approach it's recommended to disable third-party CDN’s origin shield or centralized dedicated cache when using CloudFront as their origin, to reduce the blast radius of localized single PoP event.
-
-## Additional resources
-* TODO https://ns1.com/writable/resources/ns1-ds-mux-integration.pdf
-* TODO talk about risk of cache miss configuration issues on a CDN
