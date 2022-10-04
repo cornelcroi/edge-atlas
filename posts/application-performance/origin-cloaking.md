@@ -22,7 +22,7 @@ With the network level protections, your application can still be prone to a mal
 * If you manage the http server at the origin, such as an NGINX server on prem or using EC2, then you can send a header with a secret from CloudFront, that is validated at your server before processing requests. This header can be sent using CloudFront's [Origin Customer Headers feature](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/add-origin-custom-headers.html).
 * When the origin is based on ALB, the secret header can either be validated by a [rule on ALB](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/restrict-access-to-load-balancer.html#restrict-alb-route-based-on-header) or by an AWS WAF [WebACL associated to the ALB](https://aws.amazon.com/blogs/security/how-to-enhance-amazon-cloudfront-origin-security-with-aws-waf-and-aws-secrets-manager/).
 * When the origin is an API Gateway, the secret key can be validated using [API keys](https://aws.amazon.com/blogs/compute/protecting-your-api-using-amazon-api-gateway-and-aws-waf-part-2/).
-* When the origin is an S3 bucket, CloudFront's [OAI](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) feature allows developer to keep the bucket private and only allowing access to CloudFront.
+* When the origin is an S3 bucket, CloudFront's [OAC](https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/) feature allows developer to keep the bucket private and only allowing access to CloudFront.
 
 ![](/static-assets/origin-cloaking-app-level-alb.png)
 
