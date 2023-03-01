@@ -3,7 +3,7 @@ title: 'A/B Testing'
 metaDesc: 'A/B testing or canary deployments technique allow developers to experiment with two or more variants of a web page.'
 socialImage: static-assets/canary-deployments-cff.png
 ---
-## Overview
+## Overview :)
 A/B testing or canary deployments technique allow developers to experiment with two or more variants of a web page. Variants are randomly shown to users, and then statistical analysis is used to determine which variant performs better for a given business goal. A/B testing can be implemented in different ways according to requirements.
 
 ## Architectural decisions
