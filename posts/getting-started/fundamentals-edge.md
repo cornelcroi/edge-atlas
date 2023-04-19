@@ -3,7 +3,7 @@ title: 'Edge fundamentals'
 metaDesc: 'An introduction to AWS edge services'
 socialImage: static-assets/fundamentals-edge-thumb.png
 ---
-## Overview
+## Overview :)
 An AWS Region is a physical location where AWS clusters data centers and operates regional services, like EC2 and S3. In the specific case of online applications, user traffic may traverse multiple public networks to reach a regional infrastructure. Customers who want to address the drawbacks of traversing uncontrolled networks in terms of performance, reliability and security should consider adding AWS edge services to their architectures. AWS edge services like Amazon CloudFront and AWS Global Accelerator, operate across hundreds of worldwide distributed Points of Presence (PoPs) outside of AWS Regions. Users are served from these PoPs within 20 to 30 milliseconds on average, and, when needed, their traffic is carried back to customers’ regional infrastructure over the AWS global network instead of going over the public internet. The AWS Global Infrastructure is a purpose-built, highly available, and low-latency private infrastructure built on a global, fully redundant, metro fiber network that is linked via terrestrial and trans-oceanic cables across the world. For more details about this topic, read this [blog](https://aws.amazon.com/blogs/networking-and-content-delivery/well-architecting-online-applications-with-cloudfront-and-aws-global-accelerator/)
 
 ## CloudFront, the CDN of AWS
