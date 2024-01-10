@@ -7,7 +7,7 @@ const Home = () => {
           <div className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'>
             <a href="https://aws.amazon.com/about-aws/whats-new/2022/07/aws-waf-sensitivity-levels-sql-injection-rule-statements/" target="_blank">
             <img style={{objectFit:'cover', margin:'auto', width:'385px', height:'164px'}} src={`static-assets/thumbnail-edge.png`}/>
-              <h1 className='p-4'><b>AWS WAF adds sensitivity levels for SQL injection rule statements</b></h1>
+              <h1 className='p-4'><b>*** AWS WAF adds sensitivity levels for SQL injection rule statements</b></h1>
               <p className='p-2 container mx-auto flex justify-center '>Jul 26, 2022</p>
             </a>
           </div>
